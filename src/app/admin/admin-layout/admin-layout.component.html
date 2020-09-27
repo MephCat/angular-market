@@ -1,0 +1,38 @@
+
+<nav class="navbar bg-dark">
+  <a routerLink="/">
+    <h1>
+      Market
+    </h1>
+  </a>
+  <ul>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/admin', 'dashboard']">
+        Dashboard
+      </a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/admin', 'create']">
+        Create product
+      </a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/admin', 'orders']">
+        Orders
+      </a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/admin', '']">
+        Logout
+      </a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/admin', 'login']">
+        login
+      </a>
+    </li>
+  </ul>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
