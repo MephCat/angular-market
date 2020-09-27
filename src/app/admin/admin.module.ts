@@ -7,6 +7,7 @@ import { DashboardPageComponent } from './dashboard-page/dashboard-page.componen
 import { EditPageComponent } from './edit-page/edit-page.component';
 import { OrdersPageComponent } from './orders-page/orders-page.component';
 import {AdminLayoutComponent} from "./admin-layout/admin-layout.component";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 
@@ -22,6 +23,8 @@ import {AdminLayoutComponent} from "./admin-layout/admin-layout.component";
   imports: [
     CommonModule,
     AdminRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AdminModule { }
