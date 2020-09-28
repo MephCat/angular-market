@@ -5,7 +5,7 @@
       Market
     </h1>
   </a>
-  <ul>
+  <ul *ngIf="auth.isAuth(); else login">
     <li routerLinkActive="active">
       <a [routerLink]="['/admin', 'dashboard']">
         Dashboard
@@ -22,16 +22,22 @@
       </a>
     </li>
     <li routerLinkActive="active">
-      <a [routerLink]="['/admin', '']">
+      <a href="#" (click)="logout($event)">
         Logout
       </a>
     </li>
-    <li routerLinkActive="active">
-      <a [routerLink]="['/admin', 'login']">
-        login
-      </a>
-    </li>
   </ul>
+
+  <ng-template #login>
+    <ul>
+      <li routerLinkActive="active">
+        <a [routerLink]="['/admin', 'login']">
+          login
+        </a>
+      </li>
+    </ul>
+  </ng-template>
+
 </nav>
 <div class="container">
   <router-outlet></router-outlet>

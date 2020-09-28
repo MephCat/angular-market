@@ -6,7 +6,7 @@ import {DashboardPageComponent} from "./dashboard-page/dashboard-page.component"
 import {CreatePageComponent} from "./create-page/create-page.component";
 import {OrdersPageComponent} from "./orders-page/orders-page.component";
 import {EditPageComponent} from "./edit-page/edit-page.component";
-
+import {AuthGuard} from "../shared/guards/auth.guard";
 
 const routes: Routes = [
   {
@@ -24,19 +24,23 @@ const routes: Routes = [
       },
       {
         path: 'dashboard',
-        component: DashboardPageComponent
+        component: DashboardPageComponent,
+        canActivate: [AuthGuard]
       },
       {
         path: 'create',
-        component: CreatePageComponent
+        component: CreatePageComponent,
+        canActivate: [AuthGuard]
       },
       {
         path: 'orders',
-        component: OrdersPageComponent
+        component: OrdersPageComponent,
+        canActivate: [AuthGuard]
       },
       {
         path: 'product/:id/edit',
-        component: EditPageComponent
+        component: EditPageComponent,
+        canActivate: [AuthGuard]
       }
     ]
   }
