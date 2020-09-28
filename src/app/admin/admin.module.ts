@@ -8,7 +8,7 @@ import { EditPageComponent } from './edit-page/edit-page.component';
 import { OrdersPageComponent } from './orders-page/orders-page.component';
 import {AdminLayoutComponent} from "./admin-layout/admin-layout.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-
+import { QuillModule } from 'ngx-quill'
 
 
 @NgModule({
@@ -24,7 +24,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     CommonModule,
     AdminRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    QuillModule.forRoot()
   ]
 })
 export class AdminModule { }
