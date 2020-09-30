@@ -37,7 +37,6 @@ export class CreatePageComponent implements OnInit {
         price: this.form.value.price,
         date: new Date()
       }
-      console.log(product)
       this.productServices.createProduct(product).subscribe( res => {
         console.log(res)
         this.submitted = false
